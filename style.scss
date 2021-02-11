@@ -1,15 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+$lightGrey: #f6f7fb;
+$grey: #e0e0e0;
+$blue: #3498db;
 
 *{
     box-sizing:border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Muli', sans-serif;
+    background-color: $lightGrey;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0;
     height: 100vh;
+}
+
+.container {
+    text-align: center;;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+    &:before {
+        content: '';
+        background-color: $grey;
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        // left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+        transition: .4s ease;
+    }
+}
+
+
+
+.progress {
+    background-color: $blue;
+    position: absolute;
+    width: 20%;
+    height: 4px;
+    // left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.circle {
+    background-color: #fff;
+    color: #999;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid $grey;
+    transition: .4s ease;
+    &.active {
+        border-color: $blue;
+    }
+}
+
+.btn {
+    background-color: $blue;
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+    &:focus {
+        outline: 0;
+    }
+    &:active {
+        transform: scale(0.98);
+    }
+    &:disabled {
+        background-color: $grey;
+    }
 }
