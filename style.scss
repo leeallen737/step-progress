@@ -20,7 +20,7 @@ body {
 }
 
 .container {
-    text-align: center;;
+    text-align: center;
 }
 
 .progress-container {
@@ -40,7 +40,7 @@ body {
         top: 50%;
         transform: translateY(-50%);
         z-index: -1;
-        transition: .4s ease;
+        
     }
 }
 
@@ -55,6 +55,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     z-index: -1;
+    transition: 1s ease;
 }
 
 .circle {
@@ -67,7 +68,7 @@ body {
     align-items: center;
     justify-content: center;
     border: 3px solid $grey;
-    transition: .4s ease;
+    transition: 1.2s ease;
     &.active {
         border-color: $blue;
     }
